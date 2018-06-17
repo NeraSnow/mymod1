@@ -1,0 +1,166 @@
+
+add_namespace = myevents
+
+country_event = {
+	id = myevents.1
+	title = myevents.1.t
+	desc = myevents.1.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+	always = false
+	}
+	
+	immediate = {
+				#	CHI = {create_faction = "Greater East Asia Co-Prosperity Sphere"}
+					  CHI = { puppet = JAP }
+				#	CHI = { annex_country = { target = JAP transfer_troops = yes }}
+					CHI = { annex_country = { target = MAN transfer_troops = yes }}
+					CHI = { annex_country = { target = MEN transfer_troops = yes }}
+		#			CHI = { set_cosmetic_tag = CHI_JAP_united }
+								
+		#						every_state = {
+		#		limit = {
+		#			is_core_of = JAP
+		#		}
+		#		add_core_of = CHI	
+		#		}
+		
+		
+		CHI =  
+		{
+		transfer_state = 609
+		transfer_state = 745
+		transfer_state = 524
+		}
+		
+	JAP = 	{
+		set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 0
+			}
+
+			fascism = {
+				popularity = 100
+			}
+			
+			communism = {
+				popularity = 0
+				#banned = no #default is no
+			}
+			neutrality = { 
+			popularity = 0
+			}	
+		}
+		
+		ruling_party = fascism
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	}
+	
+	}
+		
+	
+	
+	option = {
+		name = "Banzai / Wansui!"
+################################
+		
+################################		
+	}
+	
+	}
+	
+
+
+
+#	JAP = {
+#				every_owned_state = 
+#				{ 
+#					limit = {
+#					is_core_of = CHI 
+#					}					
+#				}		
+#		  }
+
+country_event = {
+	id = myevents.2
+	title = myevents.2.t
+	desc = myevents.2.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+	always = false
+	}
+	
+	immediate = {
+					  JAP = { puppet = CHI 
+							  create_wargoal = { type = annex_everything target = GXC } 
+							  create_wargoal = { type = annex_everything target = YUN } 
+							  create_wargoal = { type = annex_everything target = XSM } 
+							  create_wargoal = { type = annex_everything target = SIK } 
+							  create_wargoal = { type = annex_everything target = SHX } 
+							  create_wargoal = { type = annex_everything target = PRC } }
+							  
+					  CHI = { create_wargoal = { type = annex_everything target = GXC } 
+							  create_wargoal = { type = annex_everything target = YUN } 
+							  create_wargoal = { type = annex_everything target = XSM } 
+							  create_wargoal = { type = annex_everything target = SIK } 
+							  create_wargoal = { type = annex_everything target = SHX } 
+							  create_wargoal = { type = annex_everything target = PRC } 
+					  
+					  }
+	}
+		
+	
+	
+	option = {
+		name = "Banzai / Wansui!"
+	}
+	
+	}
+	
+	
+	country_event = {
+	id = myevents.3
+	title = myevents.3.t
+	desc = myevents.3.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+	always = false
+	}
+	
+	immediate = { 
+					  CHI = { 
+					   annex_country = { target = GXC transfer_troops = yes }
+					   annex_country = { target = YUN transfer_troops = yes }
+					   annex_country = { target = XSM transfer_troops = yes }
+					   annex_country = { target = SIK transfer_troops = yes }
+					   annex_country = { target = SHX transfer_troops = yes }
+					   annex_country = { target = PRC transfer_troops = yes }
+					  }
+	}
+		
+	
+	
+	option = {
+		name = "Chinese people will unite!"
+	}
+	
+	}
+	
+
